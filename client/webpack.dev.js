@@ -36,9 +36,9 @@ module.exports = {
                 test: /\.less$/i,
                 // 匹配对应的模块/资源后，使用下面的laoder来处理（从下到上）
                 use: [
-                  'style-loader',
-                  'css-loader',
-                  'less-loader',
+                    'style-loader',
+                    'css-loader',
+                    'less-loader',
                 ],
             },
             {
@@ -81,71 +81,71 @@ module.exports = {
             // dist/index.html有两个特征：
             // 1.内容和模板文件一模一样；
             // 2.打包出来的html文件自动引入打包生成的js资源
-            template: path.join(__dirname,'public/index.html'),
+            template: path.join(__dirname, 'public/index.html'),
             // 设置打包生成html的输出目录和文件名称
             filename: './index.html',
             // 设置对应关系，使用index入口打包出来的资源
             chunks: ['index'],
             // 打包浏览器标签页图标
-            favicon: path.join(__dirname,'public/favicon.ico')
+            favicon: path.join(__dirname, 'public/favicon.ico')
         }),
         new HtmlWebpackPlugin({
             // 以public/goods-list.html作为模板打包一份到dist目录中
             // dist/index.html有两个特征：
             // 1.内容和模板文件一模一样；
             // 2.打包出来的html文件自动引入打包生成的js资源
-            template: path.join(__dirname,'public/goods-list.html'),
+            template: path.join(__dirname, 'public/goods-list.html'),
             // 设置打包生成html的输出目录和文件名称
             filename: './goods-list.html',
             // 设置对应关系，使用list入口打包出来的资源
             chunks: ['list'],
             // 打包浏览器标签页图标
-            favicon: path.join(__dirname,'public/favicon.ico')
+            favicon: path.join(__dirname, 'public/favicon.ico')
         }),
         new HtmlWebpackPlugin({
             // 以public/goods-add.html作为模板打包一份到dist目录中
             // dist/index.html有两个特征：
             // 1.内容和模板文件一模一样；
             // 2.打包出来的html文件自动引入打包生成的js资源
-            template: path.join(__dirname,'public/goods-add.html'),
+            template: path.join(__dirname, 'public/goods-add.html'),
             // 设置打包生成html的输出目录和文件名称
             filename: './goods-add.html',
             // 设置对应关系，使用add入口打包出来的资源
             chunks: ['add'],
             // 打包浏览器标签页图标
-            favicon: path.join(__dirname,'public/favicon.ico')
+            favicon: path.join(__dirname, 'public/favicon.ico')
         }),
         new HtmlWebpackPlugin({
             // 以public/login.html作为模板打包一份到dist目录中
             // dist/index.html有两个特征：
             // 1.内容和模板文件一模一样；
             // 2.打包出来的html文件自动引入打包生成的js资源
-            template: path.join(__dirname,'public/login.html'),
+            template: path.join(__dirname, 'public/login.html'),
             // 设置打包生成html的输出目录和文件名称
             filename: './login.html',
             // 设置对应关系，使用add入口打包出来的资源
             chunks: ['login'],
             // 打包浏览器标签页图标
-            favicon: path.join(__dirname,'public/favicon.ico')
+            favicon: path.join(__dirname, 'public/favicon.ico')
         }),
         new HtmlWebpackPlugin({
             // 以public/register.html作为模板打包一份到dist目录中
             // dist/index.html有两个特征：
             // 1.内容和模板文件一模一样；
             // 2.打包出来的html文件自动引入打包生成的js资源
-            template: path.join(__dirname,'public/register.html'),
+            template: path.join(__dirname, 'public/register.html'),
             // 设置打包生成html的输出目录和文件名称
             filename: './register.html',
             // 设置对应关系，使用add入口打包出来的资源
             chunks: ['register'],
             // 打包浏览器标签页图标
-            favicon: path.join(__dirname,'public/favicon.ico')
+            favicon: path.join(__dirname, 'public/favicon.ico')
         }),
         new EslintWebpackPlugin({
             // 指定eslint检查的文件目录
-            context: path.join(__dirname,'src'),
+            context: path.join(__dirname, 'src'),
             // 排除某些目录不进行eslint检查
-            exclude: path.join(__dirname,'src/js/lib'),
+            exclude: path.join(__dirname, 'src/js/lib'),
         })
     ],
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <!-- 有name才能传到服务器 -->
+        <p><input type="file" name="file" id=""></p>
+        <p><input type="text" name="user" id=""></p>
+        <!-- button的默认type就是submmit所以会提交 -->
+        <p><button>提交</button></p>
+    </form>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.3/axios.min.js"></script>
+    <script>
+        // js方法上传文件
+        let form = document.querySelector('form')
+        form.onsubmit = function (e) {
+            // 阻止form表单跳转
+            e.preventDefault()
+            let formdata = new FormData(this)
+            axios.post('http://localhost:8080/goods/uploads', formdata, {
+                // 上传的请求头不加无法传输数据
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+                .then(res => {
+                    console.log(res)
+                })
+                .catch(err => {
+                    console.error(err);
+                })
+        }
+    </script>
+</body>
+
+</html>

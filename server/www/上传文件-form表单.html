@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!-- 
+    action="http://localhost:8080/goods/update" 设置提交地址
+    method="post" 设置提交方法
+    enctype="application/x-www-form-urlencoded" 将表单数据码编为查询字符串
+    enctype="multipart/form-data" 不对表单数据进行码编（提交原始数据）
+
+    type="file" 选择文件
+    name="upfile" 选择文件的名称
+ -->
+<form 
+    action="http://localhost:8080/goods/update" 
+    method="post"
+    enctype="multipart/form-data"
+>
+    <p>
+        <input type="file" name="upfile">
+    </p>
+    <p>
+        <input type="text" name="user">
+    </p>
+    <p>
+        <button>提交</button>
+    </p>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form>
+    <p>
+        <input type="file" name="upfile">
+    </p>
+    <p>
+        <input type="text" name="user">
+    </p>
+    <p>
+        <button>提交</button>
+    </p>
+</form>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.3/axios.min.js"></script>
+<script>
+let form = document.querySelector('form')
+form.onsubmit = function (e){
+    e.preventDefault()// 阻止默认行为（阻止表单提交）
+
+    // 收集表单数据
+    let formdata = new FormData(this)
+    
+    // 发送请求
+    axios.post('http://localhost:8080/goods/update',formdata,{// config
+        // 设置请求头信息
+        headers:{
+            // 提交的数据类型：原始数据
+            'Content-Type': 'multipart/form-data'
+        }
+    })
+    .then((res)=>{
+        console.log( res.data )
+    })
+}
+
+</script>
+</body>
+</html>

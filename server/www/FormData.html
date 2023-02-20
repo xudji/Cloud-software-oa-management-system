@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form>
+    <p>账号：<input type="text" name="user"></p>
+    <p>密码：<input type="text" name="pass"></p>
+    <p class="btn">登录</p>
+</form>
+
+<script>
+
+/* let fd = new FormData()
+
+// 添加数据
+fd.append('user1','xiaoming')
+fd.append('user2','xiaohong')
+fd.append('user1','xiaowang')
+
+// 删除数据
+// fd.delete('user2')
+
+// 修改数据
+fd.set('user3','xiaofang')// 添加
+fd.set('user3','xiaozhang')// 修改
+
+// 获取数据
+console.log( fd.get('user1') )// 'xiaoming'
+console.log( fd.get('user2') )// 'xiaohong'
+console.log( fd.get('user3') )// 'xiaozhang'
+console.log( fd.getAll('user1') )// ['xiaoming', 'xiaowang']
+console.log( fd.getAll('user2') )// ['xiaohong']
+console.log( fd.getAll('user3') )// ['xiaozhang']
+
+console.log( fd )// FormData {} */
+
+
+// FormData 用于收集表单数据
+let form = document.querySelector('form')
+let btn = document.querySelector('.btn')
+btn.onclick = function (){
+    // 创建FormData实例时，传入form节点
+    let formdata = new FormData(form)
+    console.log( formdata.get('user') )// 'xiaocuo'
+    console.log( formdata.get('pass') )// '123456'
+}
+
+</script>
+</body>
+</html>

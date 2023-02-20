@@ -11,6 +11,8 @@ module.exports = {
         index: './src/index.js',
         list: './src/goods-list.js',
         add: './src/goods-add.js',
+        login: './src/login.js',
+        register: './src/register.js',
     },
 
     // 输出
@@ -110,6 +112,32 @@ module.exports = {
             filename: './goods-add.html',
             // 设置对应关系，使用add入口打包出来的资源
             chunks: ['add'],
+            // 打包浏览器标签页图标
+            favicon: path.join(__dirname,'public/favicon.ico')
+        }),
+        new HtmlWebpackPlugin({
+            // 以public/login.html作为模板打包一份到dist目录中
+            // dist/index.html有两个特征：
+            // 1.内容和模板文件一模一样；
+            // 2.打包出来的html文件自动引入打包生成的js资源
+            template: path.join(__dirname,'public/login.html'),
+            // 设置打包生成html的输出目录和文件名称
+            filename: './login.html',
+            // 设置对应关系，使用add入口打包出来的资源
+            chunks: ['login'],
+            // 打包浏览器标签页图标
+            favicon: path.join(__dirname,'public/favicon.ico')
+        }),
+        new HtmlWebpackPlugin({
+            // 以public/register.html作为模板打包一份到dist目录中
+            // dist/index.html有两个特征：
+            // 1.内容和模板文件一模一样；
+            // 2.打包出来的html文件自动引入打包生成的js资源
+            template: path.join(__dirname,'public/register.html'),
+            // 设置打包生成html的输出目录和文件名称
+            filename: './register.html',
+            // 设置对应关系，使用add入口打包出来的资源
+            chunks: ['register'],
             // 打包浏览器标签页图标
             favicon: path.join(__dirname,'public/favicon.ico')
         }),

@@ -1,0 +1,4 @@
+# 忽略列表
+client/dist/
+client/node_modules/
+server/node_modules/

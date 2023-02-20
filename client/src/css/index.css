@@ -1,0 +1,15 @@
+:root{
+    --color: lightblue;
+}
+h1{
+    color: red;
+    display: flex;
+}
+.box1{
+    width: 120px;
+    height: 120px;
+    /* background-color: lightblue; */
+    background-color: var(--color);
+    background-image: url('../imgs/01.gif');
+    background-size: cover;
+}

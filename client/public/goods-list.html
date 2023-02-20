@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>后台管理系统-商品列表</title>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+<!-- 头部导航条 -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html">硅谷商城后台管理系统</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li><a href="./login.html">登录</a></li> -->
+          <!-- <li><a href="./regester.html">注册</a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">xiaocuo <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- 主体内容 -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- 左边侧栏 -->
+        <div class="col-md-2 content-left">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active"><a href="#">用户管理</a></li>
+                <li role="presentation"><a href="#">用户列表</a></li>
+                <li role="presentation"><a href="#">添加用户</a></li>
+            </ul>
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active"><a href="#">商品管理</a></li>
+                <li role="presentation"><a href="./goods-list.html">商品列表</a></li>
+                <li role="presentation"><a href="./goods-add.html">添加商品</a></li>
+            </ul>
+        </div>
+        <!-- 右边内容 -->
+        <div class="col-md-10 content-right">
+            <!-- 路径导航 -->
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li class="active">商品列表</li>
+            </ol>
+            <!-- 列表页显示内容 -->
+            <div class="search">
+              <form class="form-inline">
+                <div class="form-group">
+                  <label for="search-ipt"></label>
+                  <input type="text" class="form-control" id="search-ipt" placeholder="搜索...">
+                </div>
+                <button type="submit" class="btn btn-primary">搜索</button>
+              </form>
+            </div>
+            <table class="table table-bordered">
+              <tr>
+                <th>商品名称</th>
+                <th>商品价格</th>
+                <th>商品描述</th>
+                <th>商品数量</th>
+                <th>商品类型</th>
+                <th>商品图片</th>
+                <th>操作</th>
+              </tr>
+              <tr>
+                <td>商品01</td>
+                <td>1999</td>
+                <td>付出，不是索求回报的筹码；甘愿，只是喜欢一个人的前提。</td>
+                <td>25</td>
+                <td>帽子</td>
+                <td><img src="https://pc-index-static.cdn.bcebos.com/pc-index-nav/00001/%E5%AF%BC%E8%88%AAList_%E4%BA%AC%E4%B8%9C.png" alt=""></td>
+                <td>
+                  <button class="btn btn-success btn-xs">
+                    <span class="glyphicon glyphicon-pencil"></span> 编辑
+                  </button>
+                  <button class="btn btn-danger btn-xs">
+                    <span class="glyphicon glyphicon-remove"></span> 删除
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>商品02</td>
+                <td>1999</td>
+                <td>付出，不是索求回报的筹码；甘愿，只是喜欢一个人的前提。</td>
+                <td>25</td>
+                <td>鞋子</td>
+                <td><img src="https://pc-index-static.cdn.bcebos.com/pc-index-nav/00001/%E5%AF%BC%E8%88%AAList_%E4%BA%AC%E4%B8%9C.png" alt=""></td>
+                <td>
+                  <button class="btn btn-success btn-xs">
+                    <span class="glyphicon glyphicon-pencil"></span> 编辑
+                  </button>
+                  <button class="btn btn-danger btn-xs">
+                    <span class="glyphicon glyphicon-remove"></span> 删除
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>商品03</td>
+                <td>1999</td>
+                <td>付出，不是索求回报的筹码；甘愿，只是喜欢一个人的前提。</td>
+                <td>25</td>
+                <td>鞋子</td>
+                <td><img src="https://pc-index-static.cdn.bcebos.com/pc-index-nav/00001/%E5%AF%BC%E8%88%AAList_%E4%BA%AC%E4%B8%9C.png" alt=""></td>
+                <td>
+                  <button class="btn btn-success btn-xs">
+                    <span class="glyphicon glyphicon-pencil"></span> 编辑
+                  </button>
+                  <button class="btn btn-danger btn-xs">
+                    <span class="glyphicon glyphicon-remove"></span> 删除
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>商品04</td>
+                <td>1999</td>
+                <td>付出，不是索求回报的筹码；甘愿，只是喜欢一个人的前提。</td>
+                <td>25</td>
+                <td>衣服</td>
+                <td><img src="https://pc-index-static.cdn.bcebos.com/pc-index-nav/00001/%E5%AF%BC%E8%88%AAList_%E4%BA%AC%E4%B8%9C.png" alt=""></td>
+                <td>
+                  <button class="btn btn-success btn-xs">
+                    <span class="glyphicon glyphicon-pencil"></span> 编辑
+                  </button>
+                  <button class="btn btn-danger btn-xs">
+                    <span class="glyphicon glyphicon-remove"></span> 删除
+                  </button>
+                </td>
+              </tr>
+            </table>
+            <div class="pages text-right">
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

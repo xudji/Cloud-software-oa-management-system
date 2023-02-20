@@ -9,6 +9,8 @@ module.exports = {
     // 入口
     entry: {
         index: './src/index.js',
+        list: './src/goods-list.js',
+        add: './src/goods-add.js',
     },
 
     // 输出
@@ -81,7 +83,35 @@ module.exports = {
             // 设置打包生成html的输出目录和文件名称
             filename: './index.html',
             // 设置对应关系，使用index入口打包出来的资源
-            chunks: ['index']
+            chunks: ['index'],
+            // 打包浏览器标签页图标
+            favicon: path.join(__dirname,'public/favicon.ico')
+        }),
+        new HtmlWebpackPlugin({
+            // 以public/goods-list.html作为模板打包一份到dist目录中
+            // dist/index.html有两个特征：
+            // 1.内容和模板文件一模一样；
+            // 2.打包出来的html文件自动引入打包生成的js资源
+            template: path.join(__dirname,'public/goods-list.html'),
+            // 设置打包生成html的输出目录和文件名称
+            filename: './goods-list.html',
+            // 设置对应关系，使用list入口打包出来的资源
+            chunks: ['list'],
+            // 打包浏览器标签页图标
+            favicon: path.join(__dirname,'public/favicon.ico')
+        }),
+        new HtmlWebpackPlugin({
+            // 以public/goods-add.html作为模板打包一份到dist目录中
+            // dist/index.html有两个特征：
+            // 1.内容和模板文件一模一样；
+            // 2.打包出来的html文件自动引入打包生成的js资源
+            template: path.join(__dirname,'public/goods-add.html'),
+            // 设置打包生成html的输出目录和文件名称
+            filename: './goods-add.html',
+            // 设置对应关系，使用add入口打包出来的资源
+            chunks: ['add'],
+            // 打包浏览器标签页图标
+            favicon: path.join(__dirname,'public/favicon.ico')
         }),
         new EslintWebpackPlugin({
             // 指定eslint检查的文件目录

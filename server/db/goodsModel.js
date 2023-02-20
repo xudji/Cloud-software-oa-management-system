@@ -24,6 +24,10 @@ let goodsSchema = mongoose.Schema({
     num: {
         type: String,// 数据类型
         required: true,// 必填
+    },
+    type: {
+        type: String,// 数据类型
+        required: true,// 必填
     }
 })
 

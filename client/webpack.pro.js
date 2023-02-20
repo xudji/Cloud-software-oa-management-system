@@ -97,7 +97,9 @@ module.exports = {
             // 设置打包生成html的输出目录和文件名称
             filename: './index.html',
             // 设置对应关系，使用index入口打包出来的资源
-            chunks: ['index']
+            chunks: ['index'],
+            // 打包浏览器标签页图标
+            favicon: path.join(__dirname,'public/favicon.ico')
         }),
         new MiniCssExtractPlugin({
             // 设置提取出来的css文件目录和名称

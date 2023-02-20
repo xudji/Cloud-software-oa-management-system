@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>后台管理系统-首页</title>
+<title>后台管理系统-添加商品</title>
 <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -48,10 +48,10 @@
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="./login.html">登录</a></li>
-          <li><a href="./regester.html">注册</a></li>
+          <!-- <li><a href="./login.html">登录</a></li> -->
+          <!-- <li><a href="./regester.html">注册</a></li> -->
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户信息 <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">xiaocuo <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
@@ -86,14 +86,41 @@
             <!-- 路径导航 -->
             <ol class="breadcrumb">
                 <li><a href="#">首页</a></li>
-                <!-- <li><a href="#">Library</a></li> -->
-                <!-- <li class="active">Data</li> -->
+                <li><a href="#">商品管理</a></li>
+                <li class="active">添加商品</li>
             </ol>
-            <!-- 首页显示内容 -->
-            <div class="jumbotron">
-                <h1>欢迎回来！</h1>
-                <p>欢迎使用硅谷商城后台管理系统...</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">了解更多</a></p>
+            <!-- 列表页显示内容 -->
+            <div class="input-group">
+              <span class="input-group-addon" id="goods-name">商品名称</span>
+              <input type="text" class="form-control" placeholder="商品名称..." aria-describedby="goods-name">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="goods-name">商品价格</span>
+              <input type="text" class="form-control" placeholder="商品价格..." aria-describedby="goods-name">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="goods-name">商品描述</span>
+              <input type="text" class="form-control" placeholder="商品描述..." aria-describedby="goods-name">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="goods-name">商品数量</span>
+              <input type="text" class="form-control" placeholder="商品数量..." aria-describedby="goods-name">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="goods-name">商品类型</span>
+              <select id="goods-type" class="form-control">
+                <option value="">请选择</option>
+                <option value="衣服">衣服</option>
+                <option value="鞋子">鞋子</option>
+                <option value="帽子">帽子</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="goods-name">商品图片</span>
+              <input type="text" class="form-control" placeholder="商品图片..." aria-describedby="goods-name">
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary">添加商品</button>
             </div>
         </div>
     </div>
